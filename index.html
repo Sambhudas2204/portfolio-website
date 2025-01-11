@@ -7,20 +7,18 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
-    padding-top: 80px; /* To prevent header from overlapping content */
 }
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #212529;
     color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
 }
 header .container {
@@ -40,9 +38,10 @@ header nav a {
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 header nav a:hover {
-    color: #008CBA;
+    color: #00B5E2;
 }
 
 /* Hero Section */
@@ -54,61 +53,74 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
 }
 .hero h2 {
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 .hero .btn {
-    background-color: #008CBA;
+    background-color: #00B5E2;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 .hero .btn:hover {
-    background-color: #005f6b;
+    background-color: #007a87;
 }
 
 /* About Section */
 .about {
-    background-color: white;
     padding: 60px 20px;
     text-align: center;
+    background-color: #ffffff;
 }
 .about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
 /* Portfolio Section */
 .portfolio {
-    background-color: #f4f4f4;
     padding: 60px 20px;
     text-align: center;
+    background-color: #f8f9fa;
 }
 .portfolio h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 .portfolio-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
 .portfolio-item {
     background-color: white;
-    width: 280px;
-    margin: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.portfolio-item:hover {
+    transform: translateY(-10px);
 }
 .portfolio-item img {
     width: 100%;
@@ -119,17 +131,19 @@ header nav a:hover {
 .portfolio-item h3 {
     font-size: 1.5rem;
     margin-top: 15px;
+    font-weight: 500;
 }
 
 /* Skills Section */
 .skills {
-    background-color: white;
+    background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
 }
 .skills h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 .skills-list {
     display: flex;
@@ -138,7 +152,7 @@ header nav a:hover {
 }
 .skill-item {
     width: 200px;
-    margin: 10px;
+    margin: 15px;
 }
 .skill-bar {
     height: 10px;
@@ -147,15 +161,15 @@ header nav a:hover {
 }
 .html {
     width: 90%;
-    background-color: #f39c12;
+    background-color: #ff7f50;
 }
 .css {
     width: 85%;
-    background-color: #2ecc71;
+    background-color: #3498db;
 }
 .js {
     width: 80%;
-    background-color: #3498db;
+    background-color: #f39c12;
 }
 .react {
     width: 75%;
@@ -164,50 +178,40 @@ header nav a:hover {
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     padding: 60px 20px;
     text-align: center;
 }
 .testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 .testimonial-item {
-    background-color: white;
-    margin: 20px auto;
+    background-color: #ffffff;
     padding: 20px;
+    margin: 15px auto;
     width: 60%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.testimonial-item:hover {
+    transform: translateY(-10px);
 }
 .testimonial-item p {
+    font-size: 1.2rem;
     font-style: italic;
 }
 .testimonial-item strong {
     display: block;
     margin-top: 10px;
-}
-
-/* Blog Section */
-.blog {
-    background-color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-.blog h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-.blog-post {
-    margin: 20px 0;
-}
-.blog-post h3 {
-    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 /* Contact Section */
 .contact {
-    background-color: white;
+    background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
 }
@@ -224,24 +228,32 @@ header nav a:hover {
     border-radius: 4px;
 }
 .contact button {
-    background-color: #008CBA;
+    background-color: #00B5E2;
     color: white;
     padding: 12px 25px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 .contact button:hover {
-    background-color: #005f6b;
+    background-color: #007a87;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #212529;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 footer p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
