@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Header Section -->
@@ -29,7 +29,7 @@
     <section class="hero" id="hero">
         <div class="container">
             <h2>Hi, I'm Akash Sambhudas</h2>
-            <p>I'm a passionate Web Developer creating responsive, user-friendly websites and web applications.</p>
+            <p>I'm a passionate Web Developer focused on creating clean, modern, and user-friendly websites.</p>
             <a href="#contact" class="btn primary-btn">Contact Me</a>
         </div>
     </section>
@@ -38,7 +38,8 @@
     <section class="about" id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am a web developer with a strong focus on creating clean, modern, and accessible websites. With experience in front-end and back-end technologies, I aim to build web experiences that are both functional and beautiful.</p>
+            <p>I am a web developer with expertise in front-end technologies like HTML, CSS, JavaScript, and React.
+                I create dynamic and responsive websites that provide excellent user experiences.</p>
         </div>
     </section>
 
@@ -62,4 +63,363 @@
                 <div class="skill-item">
                     <h3>React</h3>
                     <div class="skill-bar react"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Web Developer at ABC Corp</h3>
+                <p><strong>2023 - Present</strong></p>
+                <ul>
+                    <li>Developed and maintained the company's website using React and Node.js.</li>
+                    <li>Worked with cross-functional teams to deliver responsive web applications.</li>
+                    <li>Optimized web pages for maximum speed and scalability.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Front-End Developer at XYZ Ltd</h3>
+                <p><strong>2021 - 2023</strong></p>
+                <ul>
+                    <li>Built responsive websites using HTML, CSS, and JavaScript.</li>
+                    <li>Improved website performance by implementing best practices in code.</li>
+                    <li>Collaborated with designers to improve UX/UI design of web pages.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Website redesign for a local business.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>E-commerce website built with React and Node.js.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +1(905)-341-0339</p>
+                <p><strong>Email:</strong> <a href="mailto:akashsamhudas@gmail.com">akashsamhudas@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Akash Sambhudas | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #00b5e2;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #00b5e2;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.hero .btn:hover {
+    background-color: #007a87;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 200px;
+    margin: 20px;
+}
+
+.skill-bar {
+    height: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.html {
+    width: 90%;
+    background-color: #f39c12;
+}
+
+.css {
+    width: 85%;
+    background-color: #3498db;
+}
+
+.js {
+    width: 80%;
+    background-color: #e74c3c;
+}
+
+.react {
+    width: 75%;
+    background-color: #2ecc71;
+}
+
+/* Experience Section */
+.experience {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.experience-item {
+    background-color: #f8f9fa;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    background-color: #00b5e2;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contact button:hover {
+    background-color: #007a87;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
     
